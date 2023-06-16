@@ -1,0 +1,11 @@
+pandas
+numpy
+spacy
+scikit-learn
+spacy-streamlit
+https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.5.0/fr_core_news_sm-3.5.0.tar.gz#egg=fr_core_news_sm
+joblib
+keras==2.12.0
+tensorflow
+streamlit-chat
+emoji
