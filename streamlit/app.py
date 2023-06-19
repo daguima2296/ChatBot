@@ -175,7 +175,7 @@ def analyze_sentiment(comment):
 
 # Fonction pour obtenir le texte saisi par l'utilisateur
 def get_text():
-    input_text = st.text_input("You: ", "", key="input")
+    input_text = st.text_input("Saisissez votre message ici: ", "", key="input")
     return input_text
 
 col1, col2, col3 = st.columns([1, 2, 1])
