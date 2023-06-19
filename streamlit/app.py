@@ -13,7 +13,7 @@ import string
 import MLPpretrait as MP
 from keras.models import load_model
 st.set_page_config(
-    page_title='Supply Chain - Satisfaction des clients',
+    page_title='VerbaSatisPyzer - ChatBot',
     page_icon='bot.png',
     layout='wide',
     menu_items={'About': "# Cette application et le fruit de nombreux efforts "})
