@@ -36,7 +36,7 @@ st.markdown(
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="center">Supply Chain - ChatBot</h1>',unsafe_allow_html=True)
+st.markdown('<h1 class="center">VerbaSatisPyzer - ChatBot</h1>',unsafe_allow_html=True)
 
 stop_words = ['au','aux','avec','ce','ces','dans','de','des','du','elle','en','et',
               'eux','il','ils','je','la','le','les','leur','lui','ma','mais','me',
