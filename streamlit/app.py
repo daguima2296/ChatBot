@@ -171,6 +171,10 @@ def analyze_sentiment(comment):
     # else:
     #     prediction=0
     #     cluster=KB.predict(TFKB.transform(Test.commentaireAmeliore.values))
+    if predictionMLP==1:
+        cluster=KG.predict(TFKG.transform(Test.commentaireAmeliore.values))
+    else:
+        cluster=KB.predict(TFKB.transform(Test.commentaireAmeliore.values))
     return (predictionMLP,cluster)
 
 # Fonction pour obtenir le texte saisi par l'utilisateur
