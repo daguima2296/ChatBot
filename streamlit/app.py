@@ -150,28 +150,28 @@ TFKB=joblib.load("TFKG.sav")
 KB=joblib.load("KG.sav")
 TFKG=joblib.load("TFKGG.sav")
 KG=joblib.load("KGG.sav")
-RF=joblib.load("RF.sav")
+#RF=joblib.load("RF.sav")
 preMLPsuitsave,preMLPsave=joblib.load("PMLP.sav")
 MLPsave=load_model("my_model.h5")
 # Fonction pour envoyer une requête à l'API d'analyse de sentiment
 def analyze_sentiment(comment):
     Test=preparecomments(comment)
-    prediction=RLsave.predict(TRLsave.transform(Test["commentaireAmeliore"]))
-    predRL=RF.predict(Test.drop(columns=["commentaireAmeliore"]))
+    # prediction=RLsave.predict(TRLsave.transform(Test["commentaireAmeliore"]))
+    # predRL=RF.predict(Test.drop(columns=["commentaireAmeliore"]))
     predictionMLP=preMLPsuitsave.transform(preMLPsave.transform(Test))
     predictionMLP=MLPsave.predict(predictionMLP)
     if predictionMLP>0.5:
         predictionMLP=1
     else:
         predictionMLP=0
-    prediction+=(predRL+predictionMLP)
-    if prediction>2:
-        prediction=1
-        cluster=KG.predict(TFKG.transform(Test.commentaireAmeliore.values))
-    else:
-        prediction=0
-        cluster=KB.predict(TFKB.transform(Test.commentaireAmeliore.values))
-    return (prediction,cluster)
+    # prediction+=(predRL+predictionMLP)
+    # if prediction>2:
+    #     prediction=1
+    #     cluster=KG.predict(TFKG.transform(Test.commentaireAmeliore.values))
+    # else:
+    #     prediction=0
+    #     cluster=KB.predict(TFKB.transform(Test.commentaireAmeliore.values))
+    return (predictionMLP,cluster)
 
 # Fonction pour obtenir le texte saisi par l'utilisateur
 def get_text():
