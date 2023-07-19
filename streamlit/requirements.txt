@@ -1,7 +1,7 @@
 pandas
 numpy
 spacy
-scikit-learn==1.0.2
+scikit-learn
 spacy-streamlit
 https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.5.0/fr_core_news_sm-3.5.0.tar.gz#egg=fr_core_news_sm
 joblib
